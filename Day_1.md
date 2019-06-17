@@ -1,4 +1,4 @@
-# UniRx TIL
+# UniRx Study
 
 ## Caution!
 불친절할 수 있음.
