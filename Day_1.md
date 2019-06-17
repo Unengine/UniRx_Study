@@ -12,8 +12,7 @@ C#에서 반응형 프로그래밍(Reactive Programming)을 위한 확장인 Rx.
 
 ex)
 
-csharp
-```
+```cs
 var uiClickStream = panel.OnPointerClickAsObservable()
 	.Subscribe(_ => Debug.Log("UI Clicked!"))
 ```
