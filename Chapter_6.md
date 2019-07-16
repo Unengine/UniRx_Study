@@ -40,6 +40,8 @@ public class AsyncEx : MonoBehaviour
         strs = await allUniTasks;
         foreach (var s in strs)
             Debug.Log(s);
+
+        await AsyncFunc();
     }
 
     async Task<string> LightWork()
@@ -66,9 +68,9 @@ public class AsyncEx : MonoBehaviour
 
     async UniTask<string> AsyncFunc()
     {
-        //코루틴도 await 가능하다.
+        //코루틴과 기존 Task도 await 가능하다.
         await SomeCoroutine();
-        await Task.Run(() => Debug.Log("Legacy Task"));
+        return await Task.Run(() => "AsyncFunc done");
     }
 
     IEnumerator SomeCoroutine()
