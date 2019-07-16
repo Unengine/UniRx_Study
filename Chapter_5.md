@@ -25,7 +25,6 @@ public class ReactivePropEx : MonoBehaviour
 
 		data.Subscribe(data => Debug.Log(data));
 	}
-
 }
 ```
 
